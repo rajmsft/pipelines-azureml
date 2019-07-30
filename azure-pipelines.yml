@@ -7,21 +7,21 @@ pool:
 steps:
 
 - task: AzureCLI@1
-   displayName: 'Install the CLI'
-   inputs:
+  displayName: 'Install the CLI'
+  inputs:
       azureSubscription: 'azuremlkraftconnection'
       scriptLocation: inlineScript
       inlineScript: 'az extension add -n azure-cli-ml'
 
 - task: AzureCLI@1
-   displayName: 'Attach folder to workspace'
+  displayName: 'Attach folder to workspace'
   inputs:
     azureSubscription: 'azuremlkraftconnection'
     scriptLocation: inlineScript
     inlineScript: 'az ml folder attach -w amlwsraj -g amlwsrajrg'
 
 - task: AzureCLI@1
-   displayName: 'Create compute for training'
+  displayName: 'Create compute for training'
   inputs:
     azureSubscription: 'azuremlkraftconnection'
     scriptLocation: inlineScript
