@@ -11,7 +11,7 @@ steps:
   inputs:
       azureSubscription: 'azuremlkraftconnection'
       scriptLocation: inlineScript
-      inlineScript: 'az extension add -n azure-cli-ml  --debug'
+      inlineScript: 'sudo az extension add -n azure-cli-ml'
 
 - task: AzureCLI@1
   displayName: 'Attach folder to workspace'
